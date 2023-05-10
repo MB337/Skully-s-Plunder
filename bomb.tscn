@@ -1,0 +1,116 @@
+[gd_scene load_steps=24 format=3 uid="uid://cmjrb5fpftsox"]
+
+[ext_resource type="Script" path="res://bomb.gd" id="1_b8o15"]
+[ext_resource type="Texture2D" uid="uid://c16yyd6a8myp3" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/1.png" id="1_chmuk"]
+[ext_resource type="Texture2D" uid="uid://yxwp1yywr8fh" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/2.png" id="2_6e40s"]
+[ext_resource type="Texture2D" uid="uid://ct4vvt64pth2c" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/3.png" id="3_7elnf"]
+[ext_resource type="Texture2D" uid="uid://dbbyokh8uq3o8" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/4.png" id="4_ufyvj"]
+[ext_resource type="Texture2D" uid="uid://vlcf5ppe7rqu" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/5.png" id="5_fvfq2"]
+[ext_resource type="Texture2D" uid="uid://cfeqc07r3fu7f" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/6.png" id="6_bc8bj"]
+[ext_resource type="Texture2D" uid="uid://0k4d7wy1i5st" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/7.png" id="7_6lyhi"]
+[ext_resource type="Texture2D" uid="uid://b8cmua1adbeb1" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/8.png" id="8_p68w1"]
+[ext_resource type="Texture2D" uid="uid://br4x7dibfltw7" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/9.png" id="9_c71d6"]
+[ext_resource type="Texture2D" uid="uid://di245j5yuwtf7" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/1.png" id="10_qgpfw"]
+[ext_resource type="Texture2D" uid="uid://cj2566pes1n0w" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/2.png" id="11_omk4w"]
+[ext_resource type="Texture2D" uid="uid://bj5it0f1l4lg3" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/3.png" id="12_j1pmu"]
+[ext_resource type="Texture2D" uid="uid://blara76to6wl2" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/4.png" id="13_u3gs2"]
+[ext_resource type="Texture2D" uid="uid://dl46a8k3w0qh6" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/5.png" id="14_sqa23"]
+[ext_resource type="Texture2D" uid="uid://bckl42qlguyah" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/6.png" id="15_pyqql"]
+[ext_resource type="Texture2D" uid="uid://cs1wykqiun12p" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/7.png" id="16_w3tsn"]
+[ext_resource type="Texture2D" uid="uid://b4ka0bpfas8xf" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/8.png" id="17_tmgpn"]
+[ext_resource type="Texture2D" uid="uid://w5rr1nhufsyv" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/9.png" id="18_87ucq"]
+[ext_resource type="Texture2D" uid="uid://djsxkvfvhtfkq" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/10.png" id="19_y8hy0"]
+[ext_resource type="Texture2D" uid="uid://nkdup5wmj5n8" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/1-Bomb Off/1.png" id="20_4shsu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpdqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_chmuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6e40s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7elnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ufyvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fvfq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bc8bj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6lyhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p68w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c71d6")
+}],
+"loop": true,
+"name": &"Explosion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_qgpfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_omk4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j1pmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u3gs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sqa23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pyqql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w3tsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tmgpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_87ucq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y8hy0")
+}],
+"loop": true,
+"name": &"bombOn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_4shsu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8x81"]
+radius = 3.16228
+
+[node name="Bomb" type="CharacterBody2D"]
+script = ExtResource("1_b8o15")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -19)
+sprite_frames = SubResource("SpriteFrames_vpdqn")
+animation = &"bombOn"
+frame_progress = 0.591676
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s8x81")

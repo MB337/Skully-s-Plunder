@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://dyynjnsk2r4tx"]
+[gd_scene load_steps=3 format=3 uid="uid://dyynjnsk2r4tx"]
+
+[ext_resource type="PackedScene" uid="uid://d0wuuq1qta3ir" path="res://hero.tscn" id="1_i3674"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smxab"]
+size = Vector2(1294, 20)
 
 [node name="Level" type="Node2D"]
+
+[node name="Hero" parent="." instance=ExtResource("1_i3674")]
+position = Vector2(584, 181)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(415, 508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(104, 0)
+shape = SubResource("RectangleShape2D_smxab")
