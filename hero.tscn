@@ -1,6 +1,6 @@
-[gd_scene load_steps=48 format=3 uid="uid://d0wuuq1qta3ir"]
+[gd_scene load_steps=48 format=3 uid="uid://hnii2olygyng"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_8tonw"]
+[ext_resource type="Script" path="res://Hero.gd" id="1_0wfpq"]
 [ext_resource type="Texture2D" uid="uid://m88lsf35ku6w" path="res://Assets/Pirate Bomb/Sprites/1-Player-Bomb Guy/1-Idle/1.png" id="1_qf50e"]
 [ext_resource type="Texture2D" uid="uid://csqk623nkm4gl" path="res://Assets/Pirate Bomb/Sprites/1-Player-Bomb Guy/1-Idle/2.png" id="2_hbsuo"]
 [ext_resource type="Texture2D" uid="uid://bnerbnqyj86tf" path="res://Assets/Pirate Bomb/Sprites/1-Player-Bomb Guy/1-Idle/3.png" id="3_hu7r6"]
@@ -203,11 +203,7 @@ height = 54.0
 [node name="Hero" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_8tonw")
-
-[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
-position = Vector2(0, 250)
-rotation = -1.5708
+script = ExtResource("1_0wfpq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_thixx")
@@ -216,3 +212,7 @@ animation = &"Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-2.5, 3)
 shape = SubResource("CapsuleShape2D_5ta75")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+position = Vector2(0, -64)
+rotation = -1.5708

@@ -10,9 +10,9 @@ var is_flipped = false
 
 func shoot():
 	var b = BOMB.instantiate()
-	b.transform = $Marker2D.transform
 	get_parent().add_child(b)
-	
+	print($Marker2D.global_transform)
+	b.global_transform = $Marker2D.global_transform
 
 func _physics_process(delta):
 	
@@ -26,6 +26,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	var direction = Input.get_axis("ui_left", "ui_right")
+	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
