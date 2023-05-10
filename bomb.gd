@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var speed = 600
+var speed = 350
 
 func _physics_process(delta):
 	position += transform.x * speed * delta
