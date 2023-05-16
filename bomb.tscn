@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmjrb5fpftsox"]
+[gd_scene load_steps=26 format=3 uid="uid://bx41qiu00mxt"]
 
 [ext_resource type="Script" path="res://bomb.gd" id="1_b8o15"]
 [ext_resource type="Texture2D" uid="uid://c6u3kwidluqkf" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/3-Explotion/1.png" id="1_chmuk"]
@@ -21,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://cit8pnsphoa8t" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/9.png" id="18_87ucq"]
 [ext_resource type="Texture2D" uid="uid://d2bjmkfhs1ruy" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/2-Bomb On/10.png" id="19_y8hy0"]
 [ext_resource type="Texture2D" uid="uid://bd40lq2bsmvn6" path="res://Assets/Pirate Bomb/Sprites/7-Objects/1-BOMB/1-Bomb Off/1.png" id="20_4shsu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od3ou"]
+radius = 130.465
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vpdqn"]
 animations = [{
@@ -54,7 +57,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Explosion",
-"speed": 20.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -101,17 +104,51 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s8x81"]
-radius = 3.16228
+radius = 19.0263
 
-[node name="Bomb" type="CharacterBody2D"]
+[sub_resource type="Gradient" id="Gradient_fq3al"]
+offsets = PackedFloat32Array(0, 0.00662252, 0.10596)
+colors = PackedColorArray(0, 0, 0, 1, 0.483444, 0.483444, 0.483444, 1, 1, 1, 1, 1)
+
+[node name="Bomb" type="Node2D"]
+
+[node name="Range" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_od3ou")
+
+[node name="Bomb" type="CharacterBody2D" parent="."]
 script = ExtResource("1_b8o15")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bomb"]
 position = Vector2(0, -19)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_vpdqn")
 animation = &"bombOn"
-frame_progress = 0.991856
+frame_progress = 0.927449
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb"]
 shape = SubResource("CircleShape2D_s8x81")
+
+[node name="Timer" type="Timer" parent="Bomb"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="AnimationTimer" type="Timer" parent="Bomb"]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Bomb"]
+position = Vector2(-2.3, -4.272)
+amount = 23
+emission_shape = 2
+emission_sphere_radius = 12.64
+linear_accel_max = 42.42
+scale_amount_min = 0.0
+scale_amount_max = 6.0
+color_ramp = SubResource("Gradient_fq3al")
+hue_variation_max = 0.51
+anim_speed_max = 95.68
+
+[connection signal="timeout" from="Bomb/Timer" to="Bomb" method="_on_timer_timeout"]
+[connection signal="timeout" from="Bomb/AnimationTimer" to="Bomb" method="_on_animation_timer_timeout"]

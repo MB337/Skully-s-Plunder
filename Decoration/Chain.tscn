@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=3 uid="uid://ch0wd5ll5gc58"]
+
+[ext_resource type="Texture2D" uid="uid://cront11xskscm" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/1.png" id="1_jqk2c"]
+[ext_resource type="Script" path="res://Decoration/Chain.gd" id="1_kj1dc"]
+[ext_resource type="Texture2D" uid="uid://byle85iffi3ek" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/2.png" id="2_lq6l3"]
+[ext_resource type="Texture2D" uid="uid://bwers6byn56kv" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/3.png" id="3_vchjv"]
+[ext_resource type="Texture2D" uid="uid://q8cwskq2jbns" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/4.png" id="4_kj6lj"]
+[ext_resource type="Texture2D" uid="uid://byb6xqchh2l5c" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/5.png" id="5_4pf2s"]
+[ext_resource type="Texture2D" uid="uid://bqce8yylseg0h" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/6.png" id="6_u83iy"]
+[ext_resource type="Texture2D" uid="uid://d2l8lxeq0whlk" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/7.png" id="7_iyi1l"]
+[ext_resource type="Texture2D" uid="uid://cxad50crsmjm3" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/8.png" id="8_asmtn"]
+[ext_resource type="Texture2D" uid="uid://dmajdrwt6qrvf" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/9.png" id="9_hbnol"]
+[ext_resource type="Texture2D" uid="uid://bgt8ltpmo152h" path="res://Assets/Pirate Bomb/Sprites/7-Objects/10-Big Chain/10.png" id="10_2hg6w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x27w6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jqk2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lq6l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vchjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kj6lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4pf2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u83iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iyi1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_asmtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hbnol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2hg6w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Chain" type="Node2D"]
+script = ExtResource("1_kj1dc")
+
+[node name="Chain" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x27w6")
+frame_progress = 0.60964

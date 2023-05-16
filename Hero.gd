@@ -11,7 +11,6 @@ var is_flipped = false
 func shoot():
 	var b = BOMB.instantiate()
 	get_parent().add_child(b)
-	print($Marker2D.global_transform)
 	b.global_transform = $Marker2D.global_transform
 
 func _physics_process(delta):

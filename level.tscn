@@ -1,18 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyynjnsk2r4tx"]
+[gd_scene load_steps=5 format=3 uid="uid://dyynjnsk2r4tx"]
 
 [ext_resource type="PackedScene" uid="uid://hnii2olygyng" path="res://hero.tscn" id="1_i3674"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_smxab"]
-size = Vector2(1294, 20)
+[ext_resource type="PackedScene" uid="uid://c0exr5shs3xmf" path="res://level_one.tscn" id="1_lse51"]
+[ext_resource type="PackedScene" uid="uid://d1c3vambc3ubr" path="res://enemy.tscn" id="4_4ns40"]
+[ext_resource type="PackedScene" uid="uid://ca0r0l58xaale" path="res://UI/hearts.tscn" id="4_xwhm2"]
 
 [node name="Level" type="Node2D"]
 
+[node name="LevelOne" parent="." instance=ExtResource("1_lse51")]
+
 [node name="Hero" parent="." instance=ExtResource("1_i3674")]
-position = Vector2(584, 181)
+position = Vector2(102, 903)
+scale = Vector2(1.2, 1.2)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(415, 508)
+[node name="Hearts" parent="." instance=ExtResource("4_xwhm2")]
+position = Vector2(1693, 83)
+scale = Vector2(2, 2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(104, 0)
-shape = SubResource("RectangleShape2D_smxab")
+[node name="Enemy" parent="." instance=ExtResource("4_4ns40")]
+position = Vector2(1268, 784)
+scale = Vector2(1.5, 1.5)
